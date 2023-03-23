@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 3s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h1 style="position: absolute; left: 650px; top: 50px" class="fs-1 text-white">OCHKo:<span class="score">0</span></h1>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px;left: 530px ; " >		
+		<img class="shooter" src="peashooter.png"  style="top: 350px;left: 530px ;  ">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px;left: 530px ;  ">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px;left: 530px ;  ">
+		<img class="shooter" src="peashooter.png"  style="top: 650px;left: 530px ;  ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px;left: 1300px ; ">
+		<img class="zombies" src="zombie2.png" style="top: 320px;left: 1300px ; ">
+		<img class="zombies" src="zombie2.png" style="top: 420px;left: 1300px ; ">
+		<img class="zombies" src="zombie4.png" style="top: 520px;left: 1300px ; ">
+		<img class="zombies" src="zombie4.png" style="top: 620px;left: 1300px ; ">
+	</div>
+<script>
+	let left1 = 1300
+	let left2 = 1300
+	let left3 = 1300
+	let left4 = 1300
+	let left5 = 1300
+	let num1 = 0
+	let goroh = document.querySelectorAll('.shooter');
+	let zombak = document.querySelectorAll('.zombies');
+	let massiv = ["o neeet", "o neet 2", "o neet 3", "o neet 4", "o neet 5"]
+		zombak[0].onclick=function(){
+			left1 = left1 - 105;
+			zombak[0].style.left = left1+"px"
+			console.log(left1)
+			if(left1 <= 550){
+				goroh[0].style.display = 'none'
+				alert(massiv[0])
+				num1 = num1 + 1
+				document.querySelector('.score').innerHTML = num1
+				if(num1 == 5){
+					zombak[0].style.display = 'none'
+					zombak[1].style.display = 'none'
+					zombak[2].style.display = 'none'
+					zombak[3].style.display = 'none'
+					zombak[4].style.display = 'none'
+					alert('ti pobedil hahahhahahahahhahahahahha net.')
+				}
+			}
+		}
+		zombak[1].onclick=function(){
+			left2 = left2 - 105;
+			zombak[1].style.left = left2+"px"
+			console.log(left2)
+			if(left2 <= 550){
+				goroh[1].style.display = 'none'
+				alert(massiv[1])
+				num1 = num1 + 1
+				document.querySelector('.score').innerHTML = num1
+				if(num1 == 5){
+					zombak[0].style.display = 'none'
+					zombak[1].style.display = 'none'
+					zombak[2].style.display = 'none'
+					zombak[3].style.display = 'none'
+					zombak[4].style.display = 'none'
+					alert('ti pobedil hahahhahahahahhahahahahha net.')
+				}
+			}
+		}
+		zombak[2].onclick=function(){
+			left3 = left3 - 105;
+			zombak[2].style.left = left3+"px"
+			console.log(left3)
+			if(left3 <= 550){
+				goroh[2].style.display = 'none'
+				alert(massiv[2])
+				num1 = num1 + 1
+				document.querySelector('.score').innerHTML = num1
+				if(num1 == 5){
+					zombak[0].style.display = 'none'
+					zombak[1].style.display = 'none'
+					zombak[2].style.display = 'none'
+					zombak[3].style.display = 'none'
+					zombak[4].style.display = 'none'
+					alert('ti pobedil hahahhahahahahhahahahahha net.')
+				}
+			}
+		}
+		zombak[3].onclick=function(){
+			left4 = left4 - 105;
+			zombak[3].style.left = left4+"px"
+			console.log(left4)
+			if(left4 <= 550){
+				goroh[3].style.display = 'none'
+				alert(massiv[3])
+				num1 = num1 + 1
+				document.querySelector('.score').innerHTML = num1
+				if(num1 == 5){
+					zombak[0].style.display = 'none'
+					zombak[1].style.display = 'none'
+					zombak[2].style.display = 'none'
+					zombak[3].style.display = 'none'
+					zombak[4].style.display = 'none'
+					alert('ti pobedil hahahhahahahahhahahahahha net.')
+				}
+			}
+		}
+		zombak[4].onclick=function(){
+			left5 = left5 - 105;
+			zombak[4].style.left = left5+"px"
+			console.log(left5)
+			if(left5 <= 550){
+				goroh[4].style.display = 'none'
+				alert(massiv[4])
+				num1 = num1 + 1
+				document.querySelector('.score').innerHTML = num1
+				if(num1 == 5){
+					zombak[0].style.display = 'none'
+					zombak[1].style.display = 'none'
+					zombak[2].style.display = 'none'
+					zombak[3].style.display = 'none'
+					zombak[4].style.display = 'none'
+					alert('ti pobedil hahahhahahahahhahahahahha net.')
+				}
+			}
+		}
+
+
+
+
+
+</script>
+</body>
+</html>
